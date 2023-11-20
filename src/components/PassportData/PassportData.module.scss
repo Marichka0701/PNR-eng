@@ -1,0 +1,79 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.passportData {
+  width: 100%;
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &_titleContainer {
+    @include title_container;
+
+    & > h3 {
+      @include main_title;
+    }
+
+    &_buttons {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .clear {
+        @include button_clear;
+      }
+
+      .more {
+        @include button_more;
+      }
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    //align-items: flex-start;
+    gap: 10px;
+
+    .label {
+      @include label;
+
+      &.fixedWidth {
+        width: 300px;
+      }
+    }
+
+    .input {
+      @include input;
+    }
+
+    &_top {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+
+      &_leftSide {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      &_rightSide {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    &_container_fullWidth {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

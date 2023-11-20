@@ -1,0 +1,57 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.flightData {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &_titleContainer {
+    @include title_container;
+
+    & > h3 {
+      @include main_title;
+    }
+
+    &_buttons {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .clear {
+        @include button_clear;
+      }
+
+      .more {
+        @include button_more;
+      }
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .label {
+      @include label;
+
+      &.fixedWidth {
+        width: 300px;
+      }
+    }
+
+    .input {
+      @include input;
+    }
+
+    &_container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  }
+}

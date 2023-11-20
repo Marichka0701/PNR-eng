@@ -1,0 +1,32 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.passengerData {
+  min-width: 480px;
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &_title {
+    @include main_title;
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .label {
+      @include label;
+
+      &.fixedWidth {
+        width: 300px;
+      }
+    }
+
+    .input {
+      @include input;
+    }
+  }
+}

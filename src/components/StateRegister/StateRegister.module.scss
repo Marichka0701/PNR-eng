@@ -1,0 +1,76 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.stateRegister {
+  min-width: 800px;
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &_titleContainer {
+    @include title_container;
+    padding-bottom: 28px;
+
+    & > h3 {
+      @include main_title;
+    }
+
+    .more {
+      @include button_more;
+    }
+  }
+
+  &_interpol {
+    padding: 20px;
+    border-radius: 3px;
+    background: #DE350B;
+    box-shadow: 0 8px 12px 0 rgba(9, 30, 66, 0.15);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    &_description {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &_notice {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+
+        & > p:nth-child(1) {
+          color: var(--white);
+          font-size: 18px;
+          font-weight: 900;
+          line-height: 32px; /* 177.778% */
+        }
+
+        & > p:nth-child(2) {
+          color: var(--white);
+          font-size: 14px;
+          line-height: 20px; /* 142.857% */
+        }
+      }
+
+      &_noticeDescription {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > button {
+          padding: 6px 12px;
+          border-radius: 3px;
+          background: rgba(255, 255, 255, 0.10);
+          color: var(--white);
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px; /* 142.857% */
+        }
+      }
+    }
+  }
+}

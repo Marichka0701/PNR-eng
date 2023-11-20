@@ -1,0 +1,72 @@
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin title_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin main_title {
+  color: var(--body-text-main);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px; /* 116.667% */
+}
+
+@mixin label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--Caption-txt, #8691A5);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px; /* 160% */
+  text-transform: uppercase;
+}
+
+@mixin input {
+  width: 100%;
+  padding: 10px 8px;
+  border-radius: 3px;
+  border: 2px solid var(--neutral-light-n-40, #DFE1E6);
+  background: var(--white);
+  color: var(--body-text-main);
+  font-size: 14px;
+  line-height: 20px; /* 142.857% */
+
+  &::placeholder {
+    color: var(--body-text-main);
+    font-size: 14px;
+    line-height: 20px; /* 142.857% */
+  }
+}
+
+@mixin container {
+  padding: 20px;
+  border: 2px solid var(----border-color-gray);
+  background: var(--background-main-gray);
+}
+
+@mixin button_more {
+  padding: 4px 6px;
+  background: var(--background-selected);
+  border-radius: 3px;
+}
+
+@mixin button_clear {
+  text-align: left;
+  min-width: 85px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  background: var(--background-selected);
+  color: var(--sidebar-main-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}

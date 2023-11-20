@@ -1,0 +1,18 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.checkPassengerDb_wrapper {
+  position: absolute;
+  left: 240px;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+
+  &_checkPassengerDb {
+    padding: 20px;
+    background: var(--white);
+    display: flex;
+    gap: 20px;
+  }
+}

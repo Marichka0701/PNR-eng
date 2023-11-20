@@ -1,0 +1,79 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.sidebar {
+  width: 240px;
+  background: var(--background-main-gray);
+  padding: 24px 16px;
+  z-index: 100; // to show over the modal
+
+  &_options {
+    &_addNewPassenger {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      & > img {
+        padding: 8px;
+      }
+
+      & > div {
+        & > p:nth-child(1) {
+          color: var(--sidebar-main-color);
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 20px; /* 142.857% */
+        }
+
+        & > p:nth-child(2) {
+          color: #707C93;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 20px; /* 166.667% */
+        }
+      }
+    }
+
+    &_item {
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      & > p {
+        color: var(--sidebar-main-color);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 40px; /* 285.714% */
+        transition: 0.3s;
+
+        &.active {
+          color: var(--selected-blue);
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  &_additionalOptions {
+    &_item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      & > div {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 3px solid #56628C;
+      }
+
+      & > p {
+        color: var(--sidebar-main-color);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 40px; /* 285.714% */
+      }
+    }
+  }
+}

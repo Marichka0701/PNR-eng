@@ -1,0 +1,82 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.moduleReceivingData {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+
+  width: 100vw;
+
+  &_passengerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &_button {
+      min-width: 268px;
+      padding: 12px;
+      border-radius: 3px;
+      @include flex_center;
+
+      &.database {
+        display: flex;
+        gap: 10px;
+        background: var(--selected-blue);
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px; /* 142.857% */
+      }
+
+      &.analysisNetworks, &.analysisInfo {
+        background: var(--background-main-gray);
+        color: var(--sidebar-main-color);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px; /* 142.857% */
+      }
+    }
+
+    &_contacts {
+      @include container;
+
+      &_titleContainer {
+        @include title_container;
+
+        & > h3 {
+          @include main_title;
+        }
+
+        & > button {
+          @include button_more;
+        }
+      }
+
+      &_form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &_label {
+          @include label;
+
+          &_input {
+            @include input;
+          }
+        }
+      }
+    }
+  }
+
+  &_container {
+    display: flex;
+    gap: 20px;
+
+    &_leftSide, &_rightSide {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
