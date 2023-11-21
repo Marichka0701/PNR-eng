@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {useNavigate} from "react-router-dom";
 
 import styles from './Sidebar.module.scss';
 import plus from '../../assets/images/sidebar/plus.svg';
@@ -6,8 +7,25 @@ import passenger from '../../assets/images/sidebar/passenger.svg';
 import database from '../../assets/images/sidebar/database-search.svg';
 import notifications from '../../assets/images/sidebar/notifications.svg';
 import divider from '../../assets/images/sidebar/divider.svg';
+import {MAIN_ROUTES} from "../../routing/mainRoutes";
 
 const Sidebar = () => {
+    const [selectedOption, setSelectedOption] = useState('');
+
+    const navigate = useNavigate();
+
+    const handleSelectOption = (option) => {
+        setSelectedOption(option);
+
+        switch (option) {
+            case 'Mobile operators': {
+                navigate(MAIN_ROUTES.MOBILE_OPERATORS);
+                // navigate(MAIN_ROUTES.MOBILE_OPERATORS);
+                break;
+            }
+        }
+    }
+
     return (
         <div className={styles.sidebar}>
             <div className={styles.sidebar_options}>
@@ -38,22 +56,34 @@ const Sidebar = () => {
             <img src={divider} alt="divider icon"/>
 
             <div className={styles.sidebar_additionalOptions}>
-                <div className={styles.sidebar_additionalOptions_item}>
+                <div
+                    className={`${styles.sidebar_additionalOptions_item} ${selectedOption === 'Social networks' ? styles.active : ''}`}
+                    onClick={() => handleSelectOption('Social networks')}
+                >
                     <div></div>
                     <p>Social networks</p>
                 </div>
 
-                <div className={styles.sidebar_additionalOptions_item}>
+                <div
+                    className={`${styles.sidebar_additionalOptions_item} ${selectedOption === 'Operational info' ? styles.active : ''}`}
+                    onClick={() => handleSelectOption('Operational info')}
+                >
                     <div></div>
                     <p>Operational info</p>
                 </div>
 
-                <div className={styles.sidebar_additionalOptions_item}>
+                <div
+                    className={`${styles.sidebar_additionalOptions_item} ${selectedOption === 'Transport' ? styles.active : ''}`}
+                    onClick={() => handleSelectOption('Transport')}
+                >
                     <div></div>
                     <p>Transport</p>
                 </div>
 
-                <div className={styles.sidebar_additionalOptions_item}>
+                <div
+                    className={`${styles.sidebar_additionalOptions_item} ${selectedOption === 'Mobile operators' ? styles.active : ''}`}
+                    onClick={() => handleSelectOption('Mobile operators')}
+                >
                     <div></div>
                     <p>Mobile operators</p>
                 </div>

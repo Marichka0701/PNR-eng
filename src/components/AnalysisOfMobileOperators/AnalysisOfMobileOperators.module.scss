@@ -1,0 +1,28 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.analysisOfMobileOperators {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &_titleContainer {
+    @include title_container;
+
+    & > h3 {
+      @include main_title;
+    }
+
+    .more {
+      @include button_more;
+    }
+  }
+
+  &_operators {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

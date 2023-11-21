@@ -1,9 +1,9 @@
 import React from 'react';
+import {Outlet} from "react-router-dom";
 
 import styles from './MainLayout.module.scss';
 import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import ModuleReceivingData from "../../pages/ModuleReceivingData/ModuleReceivingData";
 
 const MainLayout = () => {
     return (
@@ -12,7 +12,7 @@ const MainLayout = () => {
 
             <div className={styles.mainLayout_content}>
                 <Sidebar/>
-                <ModuleReceivingData/>
+                <Outlet/>
             </div>
         </div>
     );

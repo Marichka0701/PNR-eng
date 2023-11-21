@@ -1,0 +1,16 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.analysisOfFlightsByDestination {
+  &_titleContainer {
+    @include title_container;
+
+    & > h3 {
+      @include main_title;
+    }
+
+    .more {
+      @include button_more;
+    }
+  }
+}

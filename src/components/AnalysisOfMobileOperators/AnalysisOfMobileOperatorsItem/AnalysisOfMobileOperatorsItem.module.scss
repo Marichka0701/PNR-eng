@@ -1,0 +1,11 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.analysisOfMobileOperatorsItem {
+  width: 145px;
+  height: 145px;
+  @include flex_center;
+  border-radius: 4px;
+  background: var(--background-main-gray);
+  box-shadow: 2px 4px 30px -5px rgba(228, 31, 38, 0.15);
+}

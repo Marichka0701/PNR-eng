@@ -1,0 +1,34 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.monthlyPassengerLoad {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &_titleContainer {
+    @include title_container;
+
+    & > h3 {
+      @include main_title;
+    }
+
+    .more {
+      @include button_more;
+    }
+  }
+
+  &_data {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+
+    &_leftSide, &_rightSide {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

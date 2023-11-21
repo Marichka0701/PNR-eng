@@ -1,0 +1,14 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.monthlyPassengerLoadItem {
+  @include data_text_wrapper;
+
+  &_label {
+    @include data_subtitle;
+  }
+
+  &_textDb {
+    @include data_db;
+  }
+}

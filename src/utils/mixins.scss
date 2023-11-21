@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  color: var(--Caption-txt, #8691A5);
+  color: var(--label-color-text);
   font-size: 10px;
   font-weight: 500;
   line-height: 16px; /* 160% */
@@ -34,7 +34,7 @@
   width: 100%;
   padding: 10px 8px;
   border-radius: 3px;
-  border: 2px solid var(--neutral-light-n-40, #DFE1E6);
+  border: 2px solid var(--border-input-color);
   background: var(--white);
   color: var(--body-text-main);
   font-size: 14px;
@@ -49,7 +49,7 @@
 
 @mixin container {
   padding: 20px;
-  border: 2px solid var(----border-color-gray);
+  border: 2px solid var(--border-color-gray);
   background: var(--background-main-gray);
 }
 
@@ -69,4 +69,26 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 20px; /* 142.857% */
+}
+
+@mixin data_text_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@mixin data_subtitle {
+  color: var(--label-color-text);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px; /* 160% */
+  text-transform: uppercase;
+}
+
+@mixin data_db {
+  color: var(--body-text-main);
+  font-size: 16px;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: 0.44px;
 }

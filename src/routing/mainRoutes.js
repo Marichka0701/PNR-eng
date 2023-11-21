@@ -1,3 +1,4 @@
 export const MAIN_ROUTES = {
-    HOME: "/",
+    HOME: "/main",
+    MOBILE_OPERATORS: "/mobile-operators",
 };

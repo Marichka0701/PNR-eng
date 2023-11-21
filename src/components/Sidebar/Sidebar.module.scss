@@ -57,9 +57,20 @@
 
   &_additionalOptions {
     &_item {
+      padding: 0 16px;
       display: flex;
       align-items: center;
       gap: 12px;
+
+      &.active {
+        & > div {
+          border-color: var(--selected-blue);
+        }
+
+        & > p {
+          color: var(--selected-blue);
+        }
+      }
 
       & > div {
         width: 16px;

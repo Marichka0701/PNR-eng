@@ -1,0 +1,40 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.traffic {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &_titleContainer {
+    @include title_container;
+
+    & > h3 {
+      @include main_title;
+    }
+
+    .more {
+      @include button_more;
+    }
+  }
+
+  &_data {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    &_item {
+        @include data_text_wrapper;
+
+        &_label {
+            @include data_subtitle;
+        }
+
+        &_textDb {
+            @include data_db;
+        }
+    }
+  }
+}
