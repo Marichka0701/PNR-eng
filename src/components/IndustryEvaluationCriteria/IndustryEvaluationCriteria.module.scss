@@ -2,10 +2,15 @@
 @import "src/utils/mixins";
 
 .industryEvaluationCriteria {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
   &_titleContainer {
     @include title_container;
 
-    & > h3  {
+    & > h3 {
       @include main_title;
     }
 

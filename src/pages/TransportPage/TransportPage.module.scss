@@ -8,6 +8,6 @@
   gap: 20px;
 
   &_leftSide, &_rightSide {
-    width: 45%;
+    min-width: 50%;
   }
 }

@@ -2,20 +2,33 @@
 @import "src/utils/mixins";
 
 .passengerTraffic {
-    @include container;
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &_titleContainer {
+    @include title_container;
+
+    & > h3 {
+      @include main_title;
+    }
+
+    .more {
+      @include button_more;
+    }
+  }
+
+  &_chart {
+    width: 500px;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 35px;
 
-    &_titleContainer {
-        @include title_container;
-
-        & > h3 {
-        @include main_title;
-        }
-
-        .more {
-        @include button_more;
-        }
+    & > p {
+      color: rgba(0, 0, 0, 0.2);
+      font-size: 14px;
+      line-height: 20px; /* 142.857% */
     }
+  }
 }
