@@ -1,0 +1,21 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.passengerTraffic {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    &_titleContainer {
+        @include title_container;
+
+        & > h3 {
+        @include main_title;
+        }
+
+        .more {
+        @include button_more;
+        }
+    }
+}

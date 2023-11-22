@@ -2,6 +2,9 @@
 @import "src/utils/mixins";
 
 .sidebar {
+  position: fixed;
+  top: 65px;
+  height: 100%;
   width: 240px;
   background: var(--background-main-gray);
   padding: 24px 16px;
@@ -39,6 +42,21 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      transition: 0.3s;
+
+      &.active {
+        background: rgba(9, 30, 66, 0.04);
+        border-radius: 3px;
+        transition: 0.3s;
+
+        & > div {
+          border-color: var(--selected-blue);
+        }
+
+        & > p {
+          color: var(--selected-blue);
+        }
+      }
 
       & > p {
         color: var(--sidebar-main-color);
@@ -61,8 +79,13 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      transition: 0.3s;
 
       &.active {
+        background: rgba(9, 30, 66, 0.04);
+        border-radius: 3px;
+        transition: 0.3s;
+
         & > div {
           border-color: var(--selected-blue);
         }

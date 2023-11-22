@@ -83,7 +83,7 @@ const ModuleReceivingData = () => {
                 <div className={styles.moduleReceivingData_container}>
                     <div className={styles.moduleReceivingData_container_leftSide}>
                         <PassportData/>
-                        <VisaData/>
+                        <VisaData direction={'row'}/>
                     </div>
 
                     <div className={styles.moduleReceivingData_container_rightSide}>

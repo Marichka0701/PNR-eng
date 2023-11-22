@@ -38,8 +38,17 @@
 
     &_container {
       display: flex;
-      align-items: center;
-      gap: 10px;
+
+      &.row {
+        align-items: center;
+        gap: 10px;
+      }
+
+      &.column {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
     }
   }
 }

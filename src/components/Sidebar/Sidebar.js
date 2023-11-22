@@ -4,13 +4,16 @@ import {useNavigate} from "react-router-dom";
 import styles from './Sidebar.module.scss';
 import plus from '../../assets/images/sidebar/plus.svg';
 import passenger from '../../assets/images/sidebar/passenger.svg';
+import passengerActive from '../../assets/images/sidebar/passenger-active.svg';
 import database from '../../assets/images/sidebar/database-search.svg';
+import databaseActive from '../../assets/images/sidebar/database-search-active.svg';
 import notifications from '../../assets/images/sidebar/notifications.svg';
+import notificationsActive from '../../assets/images/sidebar/notifications-active.svg';
 import divider from '../../assets/images/sidebar/divider.svg';
 import {MAIN_ROUTES} from "../../routing/mainRoutes";
 
 const Sidebar = () => {
-    const [selectedOption, setSelectedOption] = useState('');
+    const [selectedOption, setSelectedOption] = useState('Passenger');
 
     const navigate = useNavigate();
 
@@ -18,9 +21,32 @@ const Sidebar = () => {
         setSelectedOption(option);
 
         switch (option) {
+            case 'Passenger': {
+                navigate(MAIN_ROUTES.PASSENGER);
+                break;
+            }
+            case 'Database search': {
+                navigate(MAIN_ROUTES.DATABASE_SEARCH);
+                break;
+            }
+            case 'Notifications': {
+                navigate(MAIN_ROUTES.NOTIFICATIONS);
+                break;
+            }
+            case 'Social networks': {
+                navigate(MAIN_ROUTES.SOCIAL_NETWORKS);
+                break;
+            }
+            case 'Operational info': {
+                navigate(MAIN_ROUTES.OPERATIONAL_INFO);
+                break;
+            }
+            case 'Transport': {
+                navigate(MAIN_ROUTES.TRANSPORT);
+                break;
+            }
             case 'Mobile operators': {
                 navigate(MAIN_ROUTES.MOBILE_OPERATORS);
-                // navigate(MAIN_ROUTES.MOBILE_OPERATORS);
                 break;
             }
         }
@@ -37,18 +63,27 @@ const Sidebar = () => {
                     </div>
                 </div>
 
-                <div className={styles.sidebar_options_item}>
-                    <img src={passenger} alt="passenger icon"/>
+                <div
+                    onClick={() => handleSelectOption('Passenger')}
+                    className={`${styles.sidebar_options_item} ${selectedOption === 'Passenger' ? styles.active : ''}`}
+                >
+                    <img src={selectedOption === 'Passenger' ? passengerActive : passenger} alt="passenger icon"/>
                     <p>Passenger</p>
                 </div>
 
-                <div className={styles.sidebar_options_item}>
-                    <img src={database} alt="database search icon"/>
+                <div
+                    onClick={() => handleSelectOption('Database search')}
+                    className={`${styles.sidebar_options_item} ${selectedOption === 'Database search' ? styles.active : ''}`}
+                >
+                    <img src={selectedOption === 'Database search' ? databaseActive : database} alt="database search icon"/>
                     <p>Database search</p>
                 </div>
 
-                <div className={styles.sidebar_options_item}>
-                    <img src={notifications} alt="notifications icon"/>
+                <div
+                    onClick={() => handleSelectOption('Notifications')}
+                    className={`${styles.sidebar_options_item} ${selectedOption === 'Notifications' ? styles.active : ''}`}
+                >
+                    <img src={selectedOption === 'Notifications' ? notificationsActive : notifications} alt="notifications icon"/>
                     <p>Notifications</p>
                 </div>
             </div>

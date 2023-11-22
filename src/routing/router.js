@@ -4,6 +4,8 @@ import {MAIN_ROUTES} from "./mainRoutes";
 import MobileOperatorsPage from "../pages/MobileOperatorsPage/MobileOperatorsPage";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 import ModuleReceivingData from "../pages/ModuleReceivingData/ModuleReceivingData";
+import TransportPage from "../pages/TransportPage/TransportPage";
+import DatabaseSearchPage from "../pages/DatabaseSearchPage/DatabaseSearchPage";
 
 export const router = createBrowserRouter([
     // {
@@ -16,15 +18,23 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Navigate to={MAIN_ROUTES.HOME}/>
+                element: <Navigate to={MAIN_ROUTES.PASSENGER}/>
             },
             {
-                path: MAIN_ROUTES.HOME,
+                path: MAIN_ROUTES.PASSENGER,
                 element: <ModuleReceivingData/>,
+            },
+            {
+                path: MAIN_ROUTES.DATABASE_SEARCH,
+                element: <DatabaseSearchPage/>,
             },
             {
                 path: MAIN_ROUTES.MOBILE_OPERATORS,
                 element: <MobileOperatorsPage/>,
+            },
+            {
+                path: MAIN_ROUTES.TRANSPORT,
+                element: <TransportPage/>,
             }
         ]
     },

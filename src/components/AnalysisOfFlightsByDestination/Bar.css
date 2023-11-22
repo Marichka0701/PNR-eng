@@ -1,0 +1,9 @@
+/* added gap between bar text */
+.recharts-wrapper > .recharts-legend-wrapper > .recharts-default-legend {
+    display: flex;
+    justify-content: space-between;
+}
+/* added color for legend text */
+.recharts-legend-item-text {
+    color: #172B4D !important;
+}

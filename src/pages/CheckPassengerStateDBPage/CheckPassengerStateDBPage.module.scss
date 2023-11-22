@@ -1,0 +1,105 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.checkPassengerStateDb {
+  @include container;
+  min-width: calc(100vw - 240px);
+  //min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &_titleContainer {
+    width: 100%;
+    @include title_container;
+
+    &_navigation {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+
+      & > h3 {
+        @include main_title;
+      }
+    }
+
+    &_buttons {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .clear {
+        @include button_clear;
+      }
+
+      .more {
+        @include button_more;
+      }
+    }
+  }
+
+  &_options {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &_search {
+      position: relative;
+      width: 250px;
+
+      &_input {
+        @include input;
+        padding-right: 40px;
+        height: 32px;
+      }
+
+      &_icon {
+        cursor: pointer;
+        position: absolute;
+        top: 4px;
+        right: 8px;
+      }
+    }
+  }
+
+  &_passengers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &_heading {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      border-bottom: 2px solid var(--border-input-color);
+
+      &_content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 1fr;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+
+        & > p {
+          color: #6B778C;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 16px; /* 160% */
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &_list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-input-color);
+    }
+  }
+}

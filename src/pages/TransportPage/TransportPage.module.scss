@@ -2,5 +2,12 @@
 @import "src/utils/mixins";
 
 .transportPage {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
 
+  &_leftSide, &_rightSide {
+    width: 45%;
+  }
 }

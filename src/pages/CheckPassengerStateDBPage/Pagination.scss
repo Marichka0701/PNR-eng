@@ -1,0 +1,13 @@
+/* pagination */
+
+.MuiPaginationItem-page {
+  color: #42526E !important;
+}
+.MuiPaginationItem-page.Mui-selected {
+  background-color: #253858 !important;
+  color: #F4F5F7 !important;
+}
+
+.MuiPaginationItem-root > svg {
+  fill: #253858 !important;
+}

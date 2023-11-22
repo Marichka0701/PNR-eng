@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './VisaData.module.scss';
 import more from "../../assets/images/moduleReceivingData/more.svg";
 
-const VisaData = () => {
+const VisaData = ({direction}) => {
     return (
         <div className={styles.visaData}>
             <div className={styles.visaData_titleContainer}>
@@ -15,7 +15,7 @@ const VisaData = () => {
             </div>
 
             <form action="#" className={styles.visaData_form}>
-                <div className={styles.visaData_form_container}>
+                <div className={`${styles.visaData_form_container} ${styles[direction]}`}>
                     <label className={`${styles.label} ${styles.fixedWidth}`}>
                         Visa Number
                         <input
@@ -35,7 +35,7 @@ const VisaData = () => {
                     </label>
                 </div>
 
-                <div className={styles.visaData_titleContainer}>
+                <div className={`${styles.visaData_form_container} ${styles[direction]}`}>
                     <label className={`${styles.label} ${styles.fixedWidth}`}>
                         Visa type
                         <input
