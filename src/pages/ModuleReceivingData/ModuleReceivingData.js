@@ -9,6 +9,7 @@ import FlightData from "../../components/FlightData/FlightData";
 import VisaData from "../../components/VisaData/VisaData";
 import AdditionalData from "../../components/AdditionalData/AdditionalData";
 import CheckPassengerDB from "../../components/CheckPassengerDB/CheckPassengerDB";
+import Contacts from "../../components/Contacts/Contacts";
 
 const ModuleReceivingData = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -41,44 +42,9 @@ const ModuleReceivingData = () => {
                         Analysis of operational information
                     </button>
 
-                    <div className={styles.moduleReceivingData_passengerInfo_contacts}>
-                        <div className={styles.moduleReceivingData_passengerInfo_contacts_titleContainer}>
-                            <h3>Contacts</h3>
-                            <button>
-                                <img src={more} alt="more info icon"/>
-                            </button>
-
-                        </div>
-                        <form className={styles.moduleReceivingData_passengerInfo_contacts_form} action="#">
-                            <label className={styles.moduleReceivingData_passengerInfo_contacts_form_label}>
-                                Phone number
-                                <input
-                                    className={styles.moduleReceivingData_passengerInfo_contacts_form_label_input}
-                                    placeholder={'+1234567890'}
-                                    type="number"
-                                />
-                            </label>
-
-                            <label className={styles.moduleReceivingData_passengerInfo_contacts_form_label}>
-                                Place of registration
-                                <input
-                                    className={styles.moduleReceivingData_passengerInfo_contacts_form_label_input}
-                                    placeholder={'Romania, Bucharest'}
-                                    type="text"
-                                />
-                            </label>
-
-                            <label className={styles.moduleReceivingData_passengerInfo_contacts_form_label}>
-                                Email
-                                <input
-                                    className={styles.moduleReceivingData_passengerInfo_contacts_form_label_input}
-                                    placeholder={'polarolara@gmail.com'}
-                                    type="email"
-                                />
-                            </label>
-                        </form>
-                    </div>
+                    <Contacts/>
                 </div>
+
 
                 <div className={styles.moduleReceivingData_container}>
                     <div className={styles.moduleReceivingData_container_leftSide}>

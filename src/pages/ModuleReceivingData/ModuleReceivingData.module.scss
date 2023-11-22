@@ -37,36 +37,6 @@
         line-height: 20px; /* 142.857% */
       }
     }
-
-    &_contacts {
-      @include container;
-
-      &_titleContainer {
-        @include title_container;
-
-        & > h3 {
-          @include main_title;
-        }
-
-        & > button {
-          @include button_more;
-        }
-      }
-
-      &_form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        &_label {
-          @include label;
-
-          &_input {
-            @include input;
-          }
-        }
-      }
-    }
   }
 
   &_container {
