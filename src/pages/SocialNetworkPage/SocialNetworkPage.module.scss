@@ -1,0 +1,19 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.socialNetworkPage {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+
+  &_column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &_row {
+    display: flex;
+    gap: 20px;
+  }
+}

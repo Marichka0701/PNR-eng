@@ -1,14 +1,22 @@
 import React from 'react';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+import {withStyles} from '@material-ui/core/styles';
+import Radio from '@material-ui/core/Radio';
+import {FormControl, FormControlLabel, FormLabel, RadioGroup} from '@material-ui/core';
 
 import styles from './PassportData.module.scss';
 import more from '../../assets/images/moduleReceivingData/more.svg';
 
 const PassportData = () => {
+    const BlueRadio = withStyles({
+        root: {
+            color: '#DFE1E6',
+            '&$checked': {
+                color: '#1976d2',
+            },
+        },
+        checked: {},
+    })((props) => <Radio color="default" {...props} />);
+
     return (
         <div className={styles.passportData}>
             <div className={styles.passportData_titleContainer}>
@@ -108,12 +116,18 @@ const PassportData = () => {
                             defaultValue="female"
                             name="radio-buttons-group"
                         >
-                            <FormControlLabel style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
-                                              control={<Radio style={{padding: '0'}}/>} label="Female"/>
-                            <FormControlLabel style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}} value="male"
-                                              control={<Radio style={{padding: '0'}}/>} label="Male"/>
-                            <FormControlLabel style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
-                                              value="unchecked" control={<Radio style={{padding: '0'}}/>} label="Unchecked"/>
+                            <FormControlLabel
+                                style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
+                                value="female"
+                                control={<BlueRadio style={{padding: '0'}}/>} label="Female"/>
+                            <FormControlLabel
+                                style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
+                                value="male"
+                                control={<BlueRadio style={{padding: '0'}}/>} label="Male"/>
+                            <FormControlLabel
+                                style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
+                                value="unchecked"
+                                control={<BlueRadio style={{padding: '0'}}/>} label="Unchecked"/>
                         </RadioGroup>
                     </FormControl>
                 </div>

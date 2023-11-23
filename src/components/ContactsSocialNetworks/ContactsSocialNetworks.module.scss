@@ -1,7 +1,7 @@
 @import "src/utils/reset";
 @import "src/utils/mixins";
 
-.passengerTraffic {
+.contactsSocialNetworks {
   @include container;
   display: flex;
   flex-direction: column;
@@ -14,22 +14,26 @@
       @include main_title;
     }
 
-    .more {
+    & > button {
       @include button_more;
     }
   }
 
-  &_chart {
-    width: 500px;
+  &_options {
+    @include options_container;
+
+    &_item {
+      @include option_item;
+
+      &.active {
+        @include option_item_active;
+      }
+    }
+  }
+
+  &_followers {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 35px;
-
-    & > p {
-      color: rgba(0, 0, 0, 0.2);
-      font-size: 14px;
-      line-height: 20px; /* 142.857% */
-    }
+    gap: 10px;
   }
 }

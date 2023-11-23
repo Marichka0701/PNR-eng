@@ -6,7 +6,7 @@ import StateRegister from "../StateRegister/StateRegister";
 import PassengerData from "../PassengerData/PassengerData";
 
 const CheckPassengerDb = ({setModalIsOpen}) => {
-    const handleCloseModal = (event) => {
+    const handleCloseModal = () => {
         setModalIsOpen(false);
     }
 

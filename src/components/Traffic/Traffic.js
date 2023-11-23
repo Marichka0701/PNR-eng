@@ -18,7 +18,7 @@ const Traffic = () => {
 
             <div className={styles.traffic_data}>
                 {traffic.map((item, index) =>
-                    <TextDBWrapperItem textDb={item?.textDb} label={item?.label}/>)}
+                    <TextDBWrapperItem key={index} textDb={item?.textDb} label={item?.label}/>)}
             </div>
         </div>
     );

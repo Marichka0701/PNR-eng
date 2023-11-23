@@ -7,6 +7,7 @@ import ModuleReceivingData from "../pages/ModuleReceivingData/ModuleReceivingDat
 import TransportPage from "../pages/TransportPage/TransportPage";
 import DatabaseSearchPage from "../pages/DatabaseSearchPage/DatabaseSearchPage";
 import NotificationsPage from "../pages/NotificationsPage/NotificationsPage";
+import SocialNetworkPage from "../pages/SocialNetworkPage/SocialNetworkPage";
 
 export const router = createBrowserRouter([
     // {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
             {
                 path: MAIN_ROUTES.NOTIFICATIONS,
                 element: <NotificationsPage/>
+            },
+            {
+                path: MAIN_ROUTES.SOCIAL_NETWORKS,
+                element: <SocialNetworkPage/>
             },
             {
                 path: MAIN_ROUTES.MOBILE_OPERATORS,

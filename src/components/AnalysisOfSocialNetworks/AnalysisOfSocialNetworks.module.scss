@@ -1,9 +1,9 @@
 @import "src/utils/reset";
 @import "src/utils/mixins";
 
-.analysisOfPassenger {
+.analysisOfSocialNetworks {
+  min-width: 500px;
   @include container;
-  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -15,13 +15,8 @@
       @include main_title;
     }
 
-    .more {
+    & > button {
       @include button_more;
     }
-  }
-
-  &_map {
-    width: 100%;
-    height: 100%;
   }
 }

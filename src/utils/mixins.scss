@@ -92,3 +92,30 @@
   line-height: 26px; /* 162.5% */
   letter-spacing: 0.44px;
 }
+
+@mixin options_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 2px solid #EBECF0;
+  border-radius: 1px;
+  transition: 0.3s;
+}
+
+@mixin option_item {
+  padding-bottom: 8px;
+  color: var(--sidebar-main-color);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 16px; /* 114.286% */
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+@mixin option_item_active {
+  border-radius: 1px;
+  color: var(--selected-blue);
+  border-bottom: 2px solid var(--selected-blue);
+  transition: 0.3s;
+}

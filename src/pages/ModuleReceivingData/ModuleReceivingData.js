@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import styles from './ModuleReceivingData.module.scss';
 import passenger from '../../assets/images/moduleReceivingData/passenger-photo.svg';
 import database from '../../assets/images/moduleReceivingData/database-search-white.svg';
-import more from '../../assets/images/moduleReceivingData/more.svg';
 import PassportData from "../../components/PassportData/PassportData";
 import FlightData from "../../components/FlightData/FlightData";
 import VisaData from "../../components/VisaData/VisaData";
