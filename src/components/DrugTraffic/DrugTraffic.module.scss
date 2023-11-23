@@ -1,0 +1,8 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.drugTraffic {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

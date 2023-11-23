@@ -1,0 +1,33 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.analysisOfOperationalInformation {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &_titleContainer {
+    @include title_container;
+
+    & > h3 {
+      @include main_title;
+    }
+
+    .more {
+      @include button_more;
+    }
+  }
+
+  &_options {
+    @include options_container;
+
+    &_item {
+      @include option_item;
+
+      &.active {
+        @include option_item_active;
+      }
+    }
+  }
+}
