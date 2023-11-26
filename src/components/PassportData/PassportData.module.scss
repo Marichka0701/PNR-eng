@@ -40,9 +40,9 @@
     //}
 
     .inputContainer {
+      @include label;
       width: 300px;
       position: relative;
-      @include label;
 
       .input {
         padding-right: 30px;
