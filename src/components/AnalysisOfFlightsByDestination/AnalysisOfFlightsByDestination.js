@@ -21,7 +21,7 @@ const AnalysisOfFlightsByDestination = () => {
                 </button>
             </div>
 
-            <BarChart style={{'background': 'white', 'padding': '10px'}} width={500} height={300} data={data}>
+            <BarChart style={{background: 'white', padding: '10px', minWidth: '100%', height: 'auto'}} width={400} height={300} data={data}>
                 <XAxis dataKey="name" />
                 <Tooltip />
                 <Legend />

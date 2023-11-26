@@ -30,6 +30,12 @@
       &.fixedWidth {
         min-width: 350px;
       }
+
+      @include adaptive_width {
+        &.fixedWidth {
+          width: 100%;
+        }
+      }
     }
 
     .input {
@@ -39,9 +45,13 @@
     &_container {
       width: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
       gap: 10px;
+
+      @include adaptive_width {
+        flex-direction: column;
+      }
     }
 
     &_statistics {

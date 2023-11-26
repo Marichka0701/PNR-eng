@@ -2,6 +2,7 @@
 @import "src/utils/mixins";
 
 .analysisOfOperationalInformation {
+  min-height: 100%;
   @include container;
   display: flex;
   flex-direction: column;

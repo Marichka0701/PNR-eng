@@ -24,21 +24,30 @@ const SocialNetworks = () => {
                 <li
                     className={`${styles.socialNetworks_options_item} ${selectedOption === 'Instagram' ? styles.active : ''}`}
                     onClick={() => handleSelectOption('Instagram')}
-                >Instagram</li>
+                >Instagram
+                </li>
                 <li
                     className={`${styles.socialNetworks_options_item} ${selectedOption === 'Facebook' ? styles.active : ''}`}
                     onClick={() => handleSelectOption('Facebook')}
-                >Facebook</li>
+                >Facebook
+                </li>
                 <li
                     className={`${styles.socialNetworks_options_item} ${selectedOption === 'Twitter' ? styles.active : ''}`}
                     onClick={() => handleSelectOption('Twitter')}
-                >Twitter</li>
+                >Twitter
+                </li>
             </ul>
 
             {
                 selectedOption === 'Instagram' &&
-                <div>
-                    <img src={instagramProfile} alt="instagram profile"/>
+                <div className={styles.socialNetworks_content}>
+                    <iframe
+                        scrolling={'no'}
+                        width="100%"
+                        height="100%"
+                        src="https://www.instagram.com/art.sample/embed/"
+                        frameBorder="0"
+                    ></iframe>
                 </div>
             }
         </div>

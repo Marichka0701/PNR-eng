@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 @mixin main_title {
@@ -118,4 +119,10 @@
   color: var(--selected-blue);
   border-bottom: 2px solid var(--selected-blue);
   transition: 0.3s;
+}
+
+@mixin adaptive_width {
+  @media screen and (max-width: 1600px) {
+    @content;
+  }
 }

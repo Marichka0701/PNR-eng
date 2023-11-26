@@ -14,7 +14,7 @@ const Notification = () => {
                 </button>
             </div>
 
-            <div>
+            <div className={styles.notification_map}>
                 <img src={map} alt="map suspicious passengers on board"/>
             </div>
         </div>

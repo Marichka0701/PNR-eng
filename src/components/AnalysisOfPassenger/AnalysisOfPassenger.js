@@ -27,7 +27,7 @@ const AnalysisOfPassenger = () => {
     return (
         <div className={styles.analysisOfPassenger}>
             <div className={styles.analysisOfPassenger_titleContainer}>
-                <h3>Analysis of mobile operators</h3>
+                <h3>Analysis of passenger</h3>
 
                 <button className={styles.more}>
                     <img src={more} alt="more info icon"/>
@@ -35,7 +35,7 @@ const AnalysisOfPassenger = () => {
             </div>
 
             <div className={styles.analysisOfPassenger_map}>
-                <div ref={mapContainerRef} style={{ width: '100%', height: '100%' }} />
+                <div ref={mapContainerRef} style={{ width: '100%', height: '100%', minHeight: '500px' }} />
             </div>
         </div>
     );

@@ -41,7 +41,7 @@ const VisaData = ({direction}) => {
                         <input
                             className={styles.input}
                             placeholder={'D'}
-                            type="text"
+                            type="date"
                         />
                     </label>
 
@@ -50,7 +50,7 @@ const VisaData = ({direction}) => {
                         <input
                             className={styles.input}
                             placeholder={'23.09.2021'}
-                            type="text"
+                            type="date"
                         />
                     </label>
                 </div>

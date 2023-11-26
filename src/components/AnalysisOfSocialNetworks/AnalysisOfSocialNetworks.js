@@ -14,7 +14,7 @@ const AnalysisOfSocialNetworks = () => {
                 </button>
             </div>
 
-            <div>
+            <div className={styles.analysisOfSocialNetworks_analysis}>
                 <img src={analysis} alt="analysis of social networks"/>
             </div>
         </div>

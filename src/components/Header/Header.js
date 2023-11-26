@@ -4,6 +4,7 @@ import styles from './Header.module.scss';
 import separator from '../../assets/images/header/separator.svg';
 import question from '../../assets/images/header/question-circle.svg';
 import user from '../../assets/images/header/avatar.svg';
+import DropdownCountry from "../DropdownCountry/DropdownCountry";
 
 const Header = () => {
     return (
@@ -12,7 +13,7 @@ const Header = () => {
                 <div className={styles.header_leftSide_logo}>
                     <div>
                         <h2>T1 PNR GOV</h2>
-                        <p>Uzbekistan</p>
+                        <DropdownCountry/>
                     </div>
                     <img src={separator} alt="separator icon"/>
                 </div>

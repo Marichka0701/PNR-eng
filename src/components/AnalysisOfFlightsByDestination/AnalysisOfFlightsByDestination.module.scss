@@ -2,7 +2,7 @@
 @import "src/utils/mixins";
 
 .analysisOfFlightsByDestination {
-  @include container;
+  //@include container;
   display: flex;
   flex-direction: column;
   gap: 28px;

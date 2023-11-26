@@ -1,34 +1,11 @@
 import React from 'react';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Pie } from 'react-chartjs-2';
 
 import styles from './PassengerTraffic.module.scss';
 import more from "../../assets/images/moduleReceivingData/more.svg";
-
-ChartJS.register(ArcElement, Tooltip, Legend);
+import CircleProgressBar from "../CircleProgressBar";
+import MarkingChart from "../MarkingChart/MarkingChart";
 
 const PassengerTraffic = () => {
-    const data = {
-        labels: ['Air', 'Rail', 'Bus'],
-        datasets: [
-            {
-                // label: '# of Votes',
-                data: [12, 19, 3],
-                backgroundColor: [
-                    'rgba(86,97,140,0.3)',
-                    'rgba(222,53,11,0.3)',
-                    'rgba(223,225,230,0.3)',
-                ],
-                borderColor: [
-                    'rgba(86,97,140, 1)',
-                    'rgba(222,53,11, 1)',
-                    'rgba(223,225,230, 1)',
-                ],
-                borderWidth: 1,
-            },
-        ],
-    };
-
     return (
         <div className={styles.passengerTraffic}>
             <div className={styles.passengerTraffic_titleContainer}>
@@ -39,9 +16,20 @@ const PassengerTraffic = () => {
             </div>
 
             <div className={styles.passengerTraffic_chart}>
-                <Pie data={data} />
+                <div className={styles.passengerTraffic_chart_marking}>
+                    <MarkingChart fill={'#56628C'} name={'Air'}/>
+                    <MarkingChart fill={'#DE350B'} name={'Rail'}/>
+                    <MarkingChart fill={'#DFE1E6'} name={'Bus'}/>
+                </div>
 
-                <p>Bishkek - Tashkent, thousand people in March, April and May 2018</p>
+                <div className={styles.passengerTraffic_chart_filled}>
+                    <div className={styles.passengerTraffic_chart_filled_content}>
+                        <CircleProgressBar progress={64} fill={'#56628C'}/>
+                        <CircleProgressBar progress={32} fill={'#DE350B'}/>
+                        <CircleProgressBar progress={4} fill={'#DFE1E6'}/>
+                    </div>
+
+                    <p>Bishkek - Tashkent, thousand people in March, April and May 2018</p></div>
             </div>
         </div>
     );

@@ -1,0 +1,10 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.placeOnBoard {
+  & > img {
+    min-width: 300px;
+    width: 100%;
+    height: 100%;
+  }
+}

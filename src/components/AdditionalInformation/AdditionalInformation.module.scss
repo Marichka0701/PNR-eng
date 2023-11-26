@@ -18,4 +18,12 @@
       @include button_more;
     }
   }
+
+  &_info {
+    width: 100%;
+
+    & > img {
+      width: 100%;
+    }
+  }
 }

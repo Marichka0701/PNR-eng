@@ -2,7 +2,7 @@
 @import "src/utils/mixins";
 
 .analysisOfSocialNetworks {
-  min-width: 500px;
+  //min-width: 500px;
   @include container;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,14 @@
 
     & > button {
       @include button_more;
+    }
+  }
+
+  &_analysis {
+    width: 100%;
+
+    & > img {
+      width: 100%;
     }
   }
 }

@@ -5,8 +5,7 @@
   padding: 20px;
   display: flex;
   gap: 20px;
-
-  width: 100vw;
+  width: 100%;
 
   &_passengerInfo {
     display: flex;
@@ -41,12 +40,32 @@
 
   &_container {
     display: flex;
+    flex: 1;
+    justify-content: space-between;
     gap: 20px;
+
+    @include adaptive_width {
+      justify-content: flex-start;
+    }
 
     &_leftSide, &_rightSide {
       display: flex;
       flex-direction: column;
       gap: 20px;
+    }
+
+    &_leftSide {
+      max-width: 60%;
+    }
+
+    &_rightSide {
+      max-width: 40%;
+    }
+
+    @include adaptive_width {
+      &_leftSide, &_rightSide {
+        max-width: 50%;
+      }
     }
   }
 }

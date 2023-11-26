@@ -12,7 +12,7 @@ const MainLayout = () => {
 
             <div className={styles.mainLayout_content}>
                 <Sidebar/>
-                <div style={{padding: '65px 0 0 240px'}}>
+                <div style={{padding: '65px 20px 0 240px', width: '100vw'}}>
                     <Outlet/>
                 </div>
             </div>

@@ -14,7 +14,7 @@ const AdditionalInformation = () => {
                 </button>
             </div>
 
-            <div>
+            <div className={styles.additionalInformation_info}>
                 <img src={additionalInfo} alt="additional info"/>
             </div>
         </div>

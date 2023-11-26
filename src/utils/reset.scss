@@ -74,8 +74,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  //overflow-x: hidden;
+  overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url('../assets/images/iconsForInput/calendar.svg') no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
 }
 
 :root {

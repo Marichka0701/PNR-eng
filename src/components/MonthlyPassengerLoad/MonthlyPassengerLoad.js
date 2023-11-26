@@ -9,7 +9,7 @@ const MonthlyPassengerLoad = () => {
     return (
         <div className={styles.monthlyPassengerLoad}>
             <div className={styles.monthlyPassengerLoad_titleContainer}>
-                <h3>Analysis of mobile operators</h3>
+                <h3>Monthly passenger load</h3>
 
                 <button className={styles.more}>
                     <img src={more} alt="more info icon"/>

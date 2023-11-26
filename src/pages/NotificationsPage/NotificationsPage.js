@@ -4,6 +4,7 @@ import styles from './NotificationsPage.module.scss';
 import Notification from "../../components/Notification/Notification";
 import DetailedInfoAboutFlight from "../../components/DetailedInfoAboutFlight/DetailedInfoAboutFlight";
 import passenger from "../../assets/images/moduleReceivingData/passenger-photo.svg";
+import PlaceOnBoard from "../../components/PlaceOnBoard/PlaceOnBoard";
 
 const NotificationsPage = () => {
     return (
@@ -12,7 +13,7 @@ const NotificationsPage = () => {
 
             <div className={styles.notificationsPage_info}>
                 <DetailedInfoAboutFlight/>
-
+                <PlaceOnBoard/>
                 <div className={styles.notificationsPage_info_profile}>
                     <img src={passenger} alt="passenger icon"/>
 

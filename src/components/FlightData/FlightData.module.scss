@@ -52,6 +52,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 10px;
+
+      @include adaptive_width {
+        width: 300px;
+        flex-direction: column;
+      }
     }
   }
 }

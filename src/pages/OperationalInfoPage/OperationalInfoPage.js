@@ -16,8 +16,12 @@ const OperationalInfoPage = () => {
             </div>
 
             <div className={styles.operationalInfoPage_row}>
-                <AnalysisOfOperationalInformation/>
-                <AdditionalInformation/>
+                <div className={styles.operationalInfoPage_row_item}>
+                    <AnalysisOfOperationalInformation/>
+                </div>
+                <div className={styles.operationalInfoPage_row_item}>
+                    <AdditionalInformation/>
+                </div>
             </div>
         </div>
     );

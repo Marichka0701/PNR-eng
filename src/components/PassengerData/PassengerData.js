@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './PassengerData.module.scss';
-import more from "../../assets/images/moduleReceivingData/more.svg";
 
 const PassengerData = () => {
     return (
@@ -32,7 +31,7 @@ const PassengerData = () => {
                     <input
                         className={styles.input}
                         placeholder={'23.09.1990'}
-                        type="text"
+                        type="date"
                     />
                 </label>
 

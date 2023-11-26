@@ -2,7 +2,7 @@
 @import "src/utils/mixins";
 
 .passengerData {
-  min-width: 480px;
+  //min-width: 480px;
   @include container;
   display: flex;
   flex-direction: column;
