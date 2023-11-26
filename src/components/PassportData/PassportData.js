@@ -1,23 +1,46 @@
 import React, {useState} from 'react';
-import {withStyles} from '@material-ui/core/styles';
-import Radio from '@material-ui/core/Radio';
-import {FormControl, FormControlLabel, FormLabel, RadioGroup} from '@material-ui/core';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import styled from '@emotion/styled';
+import Radio from '@mui/material/Radio'
+import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormLabel from '@mui/material/FormLabel';
+import RadioGroup from '@mui/material/RadioGroup';
 import {useForm} from "react-hook-form";
+
 
 import styles from './PassportData.module.scss';
 import more from '../../assets/images/moduleReceivingData/more.svg';
 import location from '../../assets/images/iconsForInput/location.svg';
 
 const PassportData = () => {
-    const BlueRadio = withStyles({
-        root: {
-            color: '#DFE1E6',
-            '&$checked': {
-                color: '#1976d2',
+    const theme = createTheme({
+        palette: {
+            grey: {
+                400: '#BDBDBD',
+            },
+            primary: {
+                main: '#1976d2',
             },
         },
-        checked: {},
-    })((props) => <Radio color="default" {...props} />);
+    });
+
+    const BlueRadio = styled(Radio)(({ theme }) => ({
+        color: theme.palette.grey[400],
+        '&$checked': {
+            color: theme.palette.primary.main,
+        },
+    }));
+
+    // const BlueRadio = styled({
+    //     root: {
+    //         color: '#DFE1E6',
+    //         '&$checked': {
+    //             color: '#1976d2',
+    //         },
+    //     },
+    //     checked: {},
+    // })((props) => <Radio color="default" {...props} />);
 
     const {
         register,
@@ -30,7 +53,6 @@ const PassportData = () => {
         mode: 'all',
     });
 
-    const [startDate, setStartDate] = useState(new Date());
 
     // useEffect(() => {
     //     reset({
@@ -154,29 +176,32 @@ const PassportData = () => {
                         />
                     </label>
 
-                    <FormControl style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
-                        <FormLabel style={{color: '#7A869A', fontSize: '10px'}}
-                                   id="demo-radio-buttons-group-label">SEX</FormLabel>
-                        <RadioGroup
-                            style={{flexWrap: 'nowrap', flexDirection: 'row', gap: '20px'}}
-                            aria-labelledby="demo-radio-buttons-group-label"
-                            defaultValue="female"
-                            name="radio-buttons-group"
-                        >
-                            <FormControlLabel
-                                style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
-                                value="female"
-                                control={<BlueRadio style={{padding: '0'}}/>} label="Female"/>
-                            <FormControlLabel
-                                style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
-                                value="male"
-                                control={<BlueRadio style={{padding: '0'}}/>} label="Male"/>
-                            <FormControlLabel
-                                style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
-                                value="unchecked"
-                                control={<BlueRadio style={{padding: '0'}}/>} label="Unchecked"/>
-                        </RadioGroup>
-                    </FormControl>
+                    <ThemeProvider theme={theme}>
+                        <FormControl style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+                            <FormLabel style={{color: '#7A869A', fontSize: '10px'}}
+                                       id="demo-radio-buttons-group-label">SEX</FormLabel>
+                            <RadioGroup
+                                style={{flexWrap: 'nowrap', flexDirection: 'row', gap: '20px'}}
+                                aria-labelledby="demo-radio-buttons-group-label"
+                                defaultValue="female"
+                                name="radio-buttons-group"
+                            >
+                                <FormControlLabel
+                                    style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
+                                    value="female"
+                                    control={<BlueRadio style={{padding: '0'}}/>} label="Female"/>
+                                <FormControlLabel
+                                    style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
+                                    value="male"
+                                    control={<BlueRadio style={{padding: '0'}}/>} label="Male"/>
+                                <FormControlLabel
+                                    style={{margin: '0', color: '#7A869A', fontSize: '14px', display: 'flex', gap: '10px'}}
+                                    value="unchecked"
+                                    control={<BlueRadio style={{padding: '0'}}/>} label="Unchecked"/>
+                            </RadioGroup>
+                        </FormControl>
+
+                    </ThemeProvider>
                 </div>
 
                 <div className={styles.inputContainer}>
